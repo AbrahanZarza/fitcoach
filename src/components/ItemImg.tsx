@@ -24,7 +24,7 @@ export function ItemImg({ tipo, id, alt, emoji, className = '' }: Props) {
   }
   return (
     <img
-      src={`/images/${tipo}/${id}.webp`}
+      src={`${import.meta.env.BASE_URL}images/${tipo}/${id}.webp`}
       alt={alt}
       loading="lazy"
       onError={() => setFallo(true)}
