@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-ink: #22311d;
+  --color-fondo: #f1f6ec;
+  --color-mandarina: #ff7a3d;
+  --color-mandarina-suave: #ffe8dc;
+  --color-hoja: #3e9b4f;
+  --color-hoja-suave: #e2f1e2;
+  --color-frambuesa: #d94f70;
+  --color-frambuesa-suave: #fae3e9;
+  --color-miel: #eaa62b;
+  --color-miel-suave: #fdf0d7;
+  --color-cielo: #4e8de8;
+  --color-cielo-suave: #e2ecfb;
+
+  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-sans: 'Instrument Sans', system-ui, sans-serif;
+
+  --shadow-sticker: 4px 4px 0 0 var(--color-ink);
+  --shadow-sticker-sm: 2px 2px 0 0 var(--color-ink);
+  --shadow-sticker-lg: 6px 6px 0 0 var(--color-ink);
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  /* Textura sutil de puntos, como papel de libreta de entrenamiento */
+  background-image: radial-gradient(color-mix(in srgb, var(--color-ink) 7%, transparent) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-mandarina);
+  outline-offset: 2px;
+}
